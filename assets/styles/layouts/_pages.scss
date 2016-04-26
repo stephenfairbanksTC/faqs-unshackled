@@ -1,14 +1,14 @@
 .full-search-wrap {
 	background-color: $unshackled-yellow;
 
-	padding: $padding-small;
+	padding: $padding-small 0;
 
 	// RESPONSIVE
 	@include respond-to(screen-md) {
-		padding: $padding-medium;
+		padding: $padding-medium 0;
 	}
 	@include respond-to(screen-lg) {
-		padding: $padding-large
+		padding: $padding-large 0;
 	}
 }
 

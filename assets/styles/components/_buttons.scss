@@ -42,6 +42,11 @@ button {
   }
 }
 
+.search-form .search-submit:hover {
+  @include callout-strong-italic-font(1.5rem, $unshackled-yellow);
+  background-color: lighten($unshackled-black, 20%);
+}
+
 .button-grey {
   @include button;
   @include callout-strong-font(1.4rem, $unshackled-black);

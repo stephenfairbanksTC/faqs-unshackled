@@ -59,22 +59,44 @@ header.banner a.brand h3 {
 
 // MAIN NAV
 nav.main-nav ul {
-
+	margin: 0;
 }
 
 nav.main-nav ul > li {
-	
+	margin: 0;
+
+	&:last-child a {
+		border-bottom: none;
+	}
 }
 
 nav.main-nav ul > li > a {
 	@include callout-italic-font(1.5rem, $unshackled-yellow, normal);
 	background-color: transparent;
-	padding: 0 1.5rem 2rem;
+	padding: 1.5rem;
+	border-bottom: 1px solid lighten($unshackled-black, 15%);
 
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: transparent;
+		background-color: lighten($unshackled-black, 10%);
+	}
+
+	// RESPONSIVE
+	@include respond-to(screen-sm) {
+		border-bottom: none;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+	}
+	@include respond-to(screen-md) {
+		
+	}
+	@include respond-to(screen-lg) {
+		top: 0;
 	}
 }
 
@@ -92,4 +114,23 @@ nav.main-nav ul > li > a {
 	.icon-bar {
 		background-color: $unshackled-yellow;
 	}
+}
+
+
+// SUB NAV - DROPDOWN STYLES
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+	background-color: lighten($unshackled-black, 15%);
+}
+
+.navbar-nav>li>.dropdown-menu {
+	background-color: lighten($unshackled-black, 15%);
+	margin-right: -1px;
+	margin-top: -2px;
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+	color: $unshackled-yellow;
 }
