@@ -28,7 +28,7 @@
       <div id="porting-select-1" class="select-wrapper">
        <select class="form-control">
        
-       <option value="option-<?php  echo $i; ?>">Porting from old network...</option>
+       <option disabled selected value>Porting from old network...</option>
 
       <?php
       $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
@@ -42,7 +42,7 @@
             <?php  the_title(); ?>
           </option>
 
-        <?php }
+        <?php $i++; }
       }
       wp_reset_postdata();
       ?>
@@ -61,7 +61,7 @@
         while ( $loop->have_posts() ) { 
           $loop->the_post();?>
           
-          <div class="well porting-info info-<?php  echo $i; ?>">
+          <div id="option-<?php echo $i; ?>" class="well porting-info">
           <h2><?php the_title(); ?></h2>
             
           <h5>Get your PAC:</h5>
@@ -101,7 +101,7 @@
       <div id="porting-select-2" class="select-wrapper">
        <select class="form-control">
        
-       <option value="option-<?php  echo $i; ?>">Porting into new network...</option>
+       <option disabled selected value>Porting into new network...</option>
 
       <?php
       $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
@@ -115,7 +115,7 @@
             <?php  the_title(); ?>
           </option>
 
-        <?php }
+        <?php  $i++;  }
       }
       wp_reset_postdata();
       ?>
@@ -133,7 +133,7 @@
         while ( $loop->have_posts() ) { 
           $loop->the_post();?>
           
-          <div class="well porting-info info-<?php  echo $i; ?>">
+          <div id="option-<?php  echo $i; ?>" class="well porting-info">
           <h2><?php the_title(); ?></h2>
             
             <h5>What's needed:</h5>

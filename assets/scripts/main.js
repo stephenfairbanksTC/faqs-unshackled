@@ -77,3 +77,18 @@
 })(jQuery); // Fully reference jQuery after this point.
 
 
+// Show info panel based on selection #1
+jQuery(function() {
+  jQuery('#porting-select-1 select').change(function(){
+    jQuery('#porting-results-1 .porting-info').hide();
+    jQuery('#porting-results-1 #' + jQuery(this).val()).show();
+  });
+});
+
+// Show info panel based on selection #2
+jQuery(function() {
+  jQuery('#porting-select-2 select').change(function(){
+    jQuery('#porting-results-2 .porting-info').hide();
+    jQuery('#porting-results-2 #' + jQuery(this).val()).show();
+  });
+});
