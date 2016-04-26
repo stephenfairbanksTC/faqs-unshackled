@@ -69,6 +69,12 @@ h6,
   @include callout-black-italic-font(1.4rem);
 }
 
-p {
+p,
+ul,
+ol {
 	margin-bottom: 2rem;
+
+	li {
+		margin-bottom: 1rem;
+	}
 }

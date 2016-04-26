@@ -19,6 +19,7 @@
 
 	label {
 		flex: 1;
+    margin-bottom: 0;
 
 		.search-field {
 			@include callout-strong-font(2rem, $unshackled-black, normal);
@@ -28,4 +29,10 @@
     		height: 41px;
 		}
 	}
+}
+
+.comment-form p,
+.form-group,
+.search-form label {
+
 }

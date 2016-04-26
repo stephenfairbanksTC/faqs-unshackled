@@ -25,14 +25,35 @@ header.banner a.brand {
 	background-size: cover;
 	display: block;
 	float: left;
-	width: 280px;
-	height: 79px;
+	width: 180px;
+    height: 50px;
+    margin-top: 10px;
 	position: relative;
 
-	h3 {
-		@include callout-italic-font(2rem, $unshackled-yellow, normal);
-		position: absolute;
-		right: -7rem;
+	// RESPONSIVE
+	@include respond-to(screen-md) {
+		width: 280px;
+		height: 79px;
+	}
+	@include respond-to(screen-lg) {
+		width: 280px;
+		height: 79px;
+	}
+}
+
+// FAQ text
+header.banner a.brand h3 {
+	@include callout-italic-font(2rem, $unshackled-yellow, normal);
+	position: absolute;
+	top: -0.5rem;
+	right: -7rem;
+
+	// RESPONSIVE
+	@include respond-to(screen-md) {
+		top: 0;
+	}
+	@include respond-to(screen-lg) {
+		top: 0;
 	}
 }
 
@@ -54,5 +75,21 @@ nav.main-nav ul > li > a {
 	&:active,
 	&:focus {
 		background-color: transparent;
+	}
+}
+
+.navbar-toggle {
+	border-radius: 100%;
+	height: 45px;
+    width: 45px;
+	padding: 10px;
+	background-color: lighten($unshackled-black, 15%);
+
+	&:hover,
+	&:active {
+		background-color: lighten($unshackled-black, 25%);
+	}
+	.icon-bar {
+		background-color: $unshackled-yellow;
 	}
 }
