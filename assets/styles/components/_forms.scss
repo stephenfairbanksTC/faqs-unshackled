@@ -32,6 +32,17 @@
 }
 
 .select-wrapper {
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
+}
+
+select.form-control {
+  font-size: 1.75rem;
+  height: 4rem;
+  font-family: $callout-font-family;
+  background-color: darken($unshackled-white, 10%);
+}
+
+.form-control option {
+  font-size: 3rem;
 }
