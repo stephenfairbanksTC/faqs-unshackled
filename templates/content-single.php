@@ -25,10 +25,10 @@
 
 
       <!-- SELECT THE NETWORKS INFO FOR PORTING INTO -->
-      <div class="select-wrapper">
+      <div id="porting-select-1" class="select-wrapper">
        <select class="form-control">
        
-       <option value="option-<?php  echo $i; ?>">Porting Into</option>
+       <option value="option-<?php  echo $i; ?>">Porting from old network...</option>
 
       <?php
       $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
@@ -51,6 +51,40 @@
       <!-- / SELECT THE NETWORKS INFO FOR PORTING INTO -->
 
 
+      <!-- RESULTING DATA FROM SELECTED DROPDOWN -->
+      <div id="porting-results-1">
+      <?php
+      $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
+        $loop = new WP_Query( $args );
+        $i = 0;
+      if ( $loop->have_posts() ) { 
+        while ( $loop->have_posts() ) { 
+          $loop->the_post();?>
+          
+          <div class="well porting-info info-<?php  echo $i; ?>">
+          <h2><?php the_title(); ?></h2>
+            
+          <h5>Get your PAC:</h5>
+            <p>
+              <?php
+              // GET DATA
+              $value = get_field( "get_your_pac" );
+              if( $value ) {
+                  echo $value;
+              } else {
+                  echo 'empty';
+              } ?>
+            </p>
+          </div>
+
+        <?php $i++; }
+      }
+      wp_reset_postdata();
+      ?>
+      </div>
+      <!-- / RESULTING DATA FROM SELECTED DROPDOWN -->
+
+
 
 
       <?php
@@ -64,10 +98,10 @@
 
 
      <!-- SELECT THE NETWORKS INFO FOR PORTING FROM -->
-      <div class="select-wrapper">
+      <div id="porting-select-2" class="select-wrapper">
        <select class="form-control">
        
-       <option value="option-<?php  echo $i; ?>">Porting From</option>
+       <option value="option-<?php  echo $i; ?>">Porting into new network...</option>
 
       <?php
       $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
@@ -90,8 +124,7 @@
       <!-- / SELECT THE NEWTORKS INFO FOR PORTING INTO -->
 
       <!-- RESULTING DATA FROM SELECTED DROPDOWN -->
-      <div class="select-wrapper">
-      
+      <div id="porting-results-2">
       <?php
       $args = array( 'post_type' => 'porting-info', 'posts_per_page' => 100, 'orderby'=> 'title', 'order' => 'ASC' );
         $loop = new WP_Query( $args );
@@ -100,10 +133,10 @@
         while ( $loop->have_posts() ) { 
           $loop->the_post();?>
           
-          <div class="well info-<?php  echo $i; ?>">
-          <h3><?php the_title(); ?></h3>
+          <div class="well porting-info info-<?php  echo $i; ?>">
+          <h2><?php the_title(); ?></h2>
             
-            <h4>What's needed:</h4>
+            <h5>What's needed:</h5>
             <p>
               <?php
               // GET DATA
@@ -115,11 +148,11 @@
               } ?>
             </p>
 
-            <h4>Get your PAC:</h4>
+            <h5>Porting into:</h5>
             <p>
               <?php
               // GET DATA
-              $value = get_field( "get_your_pac" );
+              $value = get_field( "porting_into" );
               if( $value ) {
                   echo $value;
               } else {
@@ -127,7 +160,7 @@
               } ?>
             </p>
 
-            <h4>Activate your new SIM:</h4>
+            <h5>Activate your new SIM:</h5>
             <p>
               <?php
               // GET DATA
@@ -145,7 +178,6 @@
       }
       wp_reset_postdata();
       ?>
-      </select>
       </div>
       <!-- / RESULTING DATA FROM SELECTED DROPDOWN -->
 

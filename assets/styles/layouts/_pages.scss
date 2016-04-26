@@ -27,3 +27,12 @@
 		margin-top: 3rem;
 	}
 }
+
+
+.porting-info {
+	display: none;
+
+	&.show {
+		display: block;
+	}
+}
