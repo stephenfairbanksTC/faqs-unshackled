@@ -1,0 +1,30 @@
+#footer-main {
+	padding: $padding-small;
+	background-color: $unshackled-black;
+	color: $unshackled-white;
+
+	// Links
+	a {
+		color: $unshackled-yellow;
+
+		&:hover {
+			color: darken($unshackled-yellow, 5%);
+		}
+	}
+
+	small {
+		color: darken($unshackled-white, 20%);
+		font-size: 1.3rem;
+		margin-top: 3rem;
+    	margin-bottom: 3rem;
+    	display: block;
+	}
+
+	// RESPONSIVE		
+	@include respond-to(screen-md) {
+		padding: $padding-small;
+	}
+	@include respond-to(screen-lg) {
+		padding: $padding-large;
+	}
+}

@@ -1,0 +1,58 @@
+header.banner {
+	background-color: $unshackled-black;
+	color: $unshackled-white;
+	padding: $padding-small;
+
+	// RESPONSIVE
+	@include respond-to(screen-md) {
+		padding: $padding-medium;
+	}
+	@include respond-to(screen-lg) {
+		padding: $padding-large
+	}
+
+	a {
+		color: $unshackled-yellow;
+		&:hover {
+			color: darken($unshackled-yellow, 5%);
+		}
+	}
+}
+
+// LOGO
+header.banner a.brand {
+	background: url(../images/logo.png);
+	background-size: cover;
+	display: block;
+	float: left;
+	width: 280px;
+	height: 79px;
+	position: relative;
+
+	h3 {
+		@include callout-italic-font(2rem, $unshackled-yellow, normal);
+		position: absolute;
+		right: -7rem;
+	}
+}
+
+// MAIN NAV
+nav.main-nav ul {
+
+}
+
+nav.main-nav ul > li {
+	
+}
+
+nav.main-nav ul > li > a {
+	@include callout-italic-font(1.5rem, $unshackled-yellow, normal);
+	background-color: transparent;
+	padding: 0 1.5rem 2rem;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: transparent;
+	}
+}

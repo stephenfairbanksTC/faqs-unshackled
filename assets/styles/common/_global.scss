@@ -1,0 +1,33 @@
+.main-content-wrap {
+	@include respond-to(screen-md) {
+		min-height: 50rem;
+	}
+	@include respond-to(screen-lg) {
+		min-height: 80rem;
+	}
+}
+
+.alert {
+	border: none;
+}
+
+
+.tear-top {
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	position: relative;
+	margin-top: 8rem;
+}
+
+.tear-top:before {
+	content: '';
+	position: absolute;
+	top: -4.4rem;
+	left: 0;
+	right: 0;
+	height: 4.5rem;
+}
+
+.tear-top-black:before {
+	background: url("../images/tear-top.svg") repeat-x center bottom;
+}

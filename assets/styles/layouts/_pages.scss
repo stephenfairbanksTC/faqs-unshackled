@@ -1,0 +1,29 @@
+.full-search-wrap {
+	background-color: $unshackled-yellow;
+
+	padding: $padding-small;
+
+	// RESPONSIVE
+	@include respond-to(screen-md) {
+		padding: $padding-medium;
+	}
+	@include respond-to(screen-lg) {
+		padding: $padding-large
+	}
+}
+
+// Add elements which need bottom borders
+.blog {
+
+	article {
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid $layout-border-grey;
+	}
+
+	article h1 {
+		@include callout-strong-font(2.1rem);
+		margin-bottom: 1rem;
+		margin-top: 3rem;
+	}
+}

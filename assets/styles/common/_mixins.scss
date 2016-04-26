@@ -1,0 +1,117 @@
+// RESPONSIVE MIXINS
+@mixin respond-to($breakpoint) {
+  
+  @if $breakpoint == "screen-xs" {
+    @media (min-width: $screen-xs) {
+      @content;
+    }
+  }
+
+  @elseif $breakpoint == "screen-sm" {
+    @media (min-width: $screen-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "screen-md" {
+    @media (min-width: $screen-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "screen-lg" {
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+}
+
+
+@mixin callout-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin callout-italic-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-italic-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin callout-strong-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-strong-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  font-weight: bold;
+  color: $color;
+}
+
+@mixin callout-strong-italic-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-strong-italic-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin callout-black-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-black-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  font-weight: bold;
+  color: $color;
+}
+
+@mixin callout-black-italic-font($size: 2rem, $color: $unshackled-black, $style: normal) {
+  font-family: $callout-black-italic-font-family;
+  font-style: $style;
+  text-transform: uppercase;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin standard-font($size: 1.5rem, $color: $unshackled-black) {
+  font-family: $standard-font-family;
+  font-style: normal;
+  text-transform: none;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin standard-font-strong($size: 1.5rem, $color: $unshackled-black) {
+  font-family: $standard-font-family;
+  font-style: normal;
+  text-transform: none;
+  font-size: $size;
+  color: $color;
+  font-weight: bold;
+}
+
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin button {
+  padding: 1rem 1.7rem;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  font-weight: 900;
+  cursor: pointer;
+}
