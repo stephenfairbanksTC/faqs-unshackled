@@ -78,3 +78,16 @@ ol {
 		margin-bottom: 1rem;
 	}
 }
+
+
+// Styles for single post item
+.single-post article {
+
+	// links in article
+	a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

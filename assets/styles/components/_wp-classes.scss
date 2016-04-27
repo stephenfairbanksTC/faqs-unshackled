@@ -10,29 +10,30 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: $line-height-computed auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: $line-height-computed;
   height: auto;
 }
 @media (min-width: $screen-sm-min) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: $line-height-computed;
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: $line-height-computed;
   }
 }
 
 // Captions
 .wp-caption {
   @extend .thumbnail;
+  padding: $padding-small;
 }
 .wp-caption-text {
   padding: $thumbnail-caption-padding;
