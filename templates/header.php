@@ -12,26 +12,21 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <nav class="main-nav collapse navbar-collapse" id="faq-nav-collapse">
       <?php
       if (has_nav_menu('primary_navigation')) :
-        /*wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-right']);*/
-
 
             wp_nav_menu( array(
                 'menu'              => 'primary_navigation',
                 'theme_location'    => 'primary_navigation',
                 'depth'             => 2,
-                'container'         => 'div',
-                'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
+                'container'         => 'nav',
+                'container_class'   => 'collapse navbar-collapse main-nav',
+                'container_id'      => 'faq-nav-collapse',
                 'menu_class'        => 'nav navbar-nav navbar-right',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker())
             );
-
       endif;
       ?>
-    </nav><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </header>
