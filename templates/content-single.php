@@ -15,13 +15,9 @@
 
 
       <?php 
-      // 1ST SECTION OF CONTENT
-      $value = get_field( "porting_page_content_1" );
-      if( $value ) {
-          echo $value;
-      } else {
-          echo 'empty';
-      } ?>
+        // 1ST SECTION OF CONTENT
+        the_content();
+      ?>
 
 
       <!-- SELECT THE NETWORKS INFO FOR PORTING INTO -->

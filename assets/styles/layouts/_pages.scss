@@ -13,12 +13,19 @@
 }
 
 // Add elements which need bottom borders
-.blog {
+.blog,
+.archive,
+.category,
+.search {
 
 	article {
 		padding-bottom: 2rem;
 		margin-bottom: 2rem;
 		border-bottom: 1px solid $layout-border-grey;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
 	}
 
 	article h1 {
@@ -35,5 +42,16 @@
 
 	&.show {
 		display: block;
+	}
+}
+
+.sidebar {
+	padding: $padding-small;
+	// RESPONSIVE
+	@include respond-to(screen-md) {
+		padding: ($padding-medium * 2) $padding-medium;
+	}
+	@include respond-to(screen-lg) {
+		padding: ($padding-large * 2) $padding-large;
 	}
 }
