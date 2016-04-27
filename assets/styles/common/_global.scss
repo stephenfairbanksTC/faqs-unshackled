@@ -7,6 +7,18 @@
 	}
 }
 
+.pull-right-md {
+	@include respond-to(screen-md) {
+		float: right;
+	}
+}
+
+.pull-left-md {
+	@include respond-to(screen-md) {
+		float: left;
+	}
+}
+
 .alert {
 	border: none;
 }
@@ -14,6 +26,14 @@
 .debug-item {
 	background-color: #f90;
 }
+
+.posts-navigation .nav-previous {
+	float: left;
+}
+.posts-navigation .nav-next {
+	float: right;
+}
+
 
 .tear-top {
 	padding-top: 8rem;
@@ -33,4 +53,8 @@
 
 .tear-top-black:before {
 	background: url("../images/tear-top.svg") repeat-x center bottom;
+}
+
+.padding-top {
+	padding-top: 4rem;
 }

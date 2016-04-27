@@ -3,12 +3,67 @@
 	background-color: $unshackled-black;
 	color: $unshackled-white;
 
+	h3 {
+	    font-family: $callout-strong-italic-font-family;
+	    font-style: normal;
+	    text-transform: uppercase;
+	    font-size: 1.5rem;
+	    color: $unshackled-yellow;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li {
+			margin-bottom: 0.5rem;
+		}
+
+		&.float-li {
+			text-align: center;
+
+			li {
+				display: inline-block;
+			}
+		// RESPONSIVE		
+		@include respond-to(screen-md) {
+			text-align: left;
+				li {
+					float: right;
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	.sm-link {
+	    background-color: $unshackled-yellow;
+	    color: $unshackled-black;
+	    width: 3rem;
+	    height: 3rem;
+	    line-height: 3.5rem;
+	    text-align: center;
+	    font-size: 2.2rem;
+	    margin-left: 1rem;
+	    display: inline-block;
+	    &:hover {
+			background-color: $unshackled-black;
+			color: $unshackled-yellow; 	
+	    }
+	}
+
+	.copyright {
+		font-size: 1.2rem;
+	}
+
 	// Links
 	a {
-		color: $unshackled-yellow;
+		color: $unshackled-white;
 
 		&:hover {
-			color: darken($unshackled-yellow, 5%);
+			color: $unshackled-yellow;
+			text-decoration: none;
 		}
 	}
 

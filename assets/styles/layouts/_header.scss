@@ -79,24 +79,38 @@ nav.main-nav ul > li > a {
 	&:hover,
 	&:active,
 	&:focus {
-		background-color: lighten($unshackled-black, 10%);
+		background-color: lighten($unshackled-black, 15%);
 	}
 
 	// RESPONSIVE
 	@include respond-to(screen-sm) {
 		border-bottom: none;
-
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: transparent;
-		}
 	}
 	@include respond-to(screen-md) {
 		
 	}
 	@include respond-to(screen-lg) {
 		top: 0;
+	}
+}
+
+// WHEN IN CURRENT CATEGORY
+nav.main-nav ul > li.active > a,
+nav.main-nav ul > li.active > a:hover,
+nav.main-nav ul > li.current-post-parent > a,
+nav.main-nav ul > li.current-post-parent > a:hover {
+	background-color: lighten($unshackled-black, 15%);
+	
+	// RESPONSIVE
+	@include respond-to(screen-sm) {
+
+	}
+	@include respond-to(screen-md) {
+		@include callout-italic-font(1.5rem, $unshackled-black, normal);
+		background-color: $unshackled-yellow;	
+	}
+	@include respond-to(screen-lg) {
+		
 	}
 }
 
@@ -139,4 +153,17 @@ nav.main-nav ul > li > a {
 .dropdown-menu>.active>a:focus,
 .dropdown-menu>.active>a:hover {
 	color: $unshackled-black;
+}
+
+nav.main-nav ul {
+	position: relative;
+	@include respond-to(screen-sm) {
+		top: 2rem;
+	}
+	@include respond-to(screen-md) {
+		top: 5.9rem;
+	}
+	@include respond-to(screen-lg) {
+		top: 6.9rem;
+	}
 }

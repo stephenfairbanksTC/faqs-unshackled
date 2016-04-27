@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'unshackled icons';
+  src: url('../fonts/unshackled-icons.eot');
+  src: url('../fonts/unshackled-icons.eot?#iefix') format('embedded-opentype'), url('../fonts/unshackled-icons.woff') format('woff'), url('../fonts/unshackled-icons.ttf') format('truetype'), url('../fonts/unshackled-icons.svg#unshackled-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+[class*='icon-']:after {
+  display: inline-block;
+  font-family: 'unshackled icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-2x {
+  font-size: 2rem;
+}
+
+.icon-15x {
+  font-size: 1.5rem;
+}
+
+.icon-3x {
+  font-size: 3rem;
+}
+
+.icon-4x {
+  font-size: 4rem;
+}
+
+.icon-5x {
+  font-size: 5rem;
+}
+
+.icon-free-delivery:after,
+.icon-truck:after {
+  content: '\e90e';
+}
+
+.icon-unlock:after,
+.icon-unlocked:after {
+  content: '\e90f';
+}
+
+.icon-down-arrow:after {
+  content: '\41';
+}
+
+.icon-left-arrow:after {
+  content: '\42';
+}
+
+.icon-right-arrow:after {
+  content: '\43';
+}
+
+.icon-up-arrow:after {
+  content: '\44';
+}
+
+.icon-profile:after {
+  content: '\45';
+}
+
+.icon-account:after {
+  content: '\45';
+}
+
+.icon-basket:after {
+  content: '\46';
+}
+
+.icon-facebook:after {
+  content: '\e900';
+}
+
+.icon-twitter:after {
+  content: '\e901';
+}
+
+.icon-linkedIn:after {
+  content: '\e902';
+}
+
+.icon-google-plus:after {
+  content: '\e903';
+}
+
+.icon-youtube:after {
+  content: '\e904';
+}
+
+.icon-apple:after {
+  content: '\e905';
+}
+
+.icon-android:after {
+  content: '\e906';
+}
+
+.icon-windows:after {
+  content: '\e907';
+}
+
+.icon-paypal:after {
+  content: '\e908';
+}
+
+.icon-cross:after {
+  content: '\e909';
+}
+
+.icon-checkmark:after {
+  content: '\e90a';
+}
+
+.icon-checkmark2:after {
+  content: '\e90b';
+}
+
+.icon-spinner9:after {
+  content: '\e90c';
+}
+
+.icon-info:after {
+  content: '\e90d';
+}
+

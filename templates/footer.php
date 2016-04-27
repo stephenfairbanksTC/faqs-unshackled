@@ -4,11 +4,31 @@
 		<?php dynamic_sidebar('sidebar-footer'); ?>
   </div>
 
-  <div class="row">
-	  <p>&copy; 2016 UNSHACKLED.com Limited</p>
+  <div class="row padding-top">
+  	<div class="col-md-3">
+	  <p class="copyright">&copy; 2016 UNSHACKLED.com Limited</p>
+	</div>
+	<div class="col-md-3 pull-right-md">
+
+		<ul class="float-li">
+		<li>
+        	<a href="https://www.youtube.com/channel/UCIW5HcStjxOiWcljJthh7xg" target="_blank" class="icon-youtube sm-link"></a>
+        </li>
+        <!--<a href="#" class="icon-google-plus sm-link"></a>-->
+        <li>
+        	<a href="https://twitter.com/unshackled" target="_blank" class="icon-twitter sm-link"></a>
+        </li>
+        <li>
+        	<a href="https://www.facebook.com/unshackled" target="_blank" class="icon-facebook sm-link"></a>
+        </li>
+        </ul>
+
+	</div>
   </div>
 
   <div class="row">
-	<small>UNSHACKLED.com Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN: 708466). Registered office: 18 Hilton Street, Manchester M1 1FR. Registered in England No. 09595904</small>
+	  <div class="col-md-12">
+		<small>UNSHACKLED.com Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN: 708466). Registered office: 18 Hilton Street, Manchester M1 1FR. Registered in England No. 09595904</small>
+	  </div>
   </div>
 </footer>
