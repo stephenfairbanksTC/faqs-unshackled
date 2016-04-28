@@ -1,14 +1,14 @@
 header.banner {
 	background-color: $unshackled-black;
 	color: $unshackled-white;
-	padding: $padding-small;
+	padding: 3rem 2rem 1rem;
 
 	// RESPONSIVE
 	@include respond-to(screen-md) {
-		padding: $padding-medium;
+		padding:  3rem 3rem 1rem;
 	}
 	@include respond-to(screen-lg) {
-		padding: $padding-large
+		padding: 4rem 4rem 1rem;
 	}
 
 	a {
@@ -103,11 +103,11 @@ nav.main-nav ul > li.current-post-parent > a:hover {
 	
 	// RESPONSIVE
 	@include respond-to(screen-sm) {
-
-	}
-	@include respond-to(screen-md) {
 		@include callout-italic-font(1.5rem, $unshackled-black, normal);
 		background-color: $unshackled-yellow;	
+	}
+	@include respond-to(screen-md) {
+		
 	}
 	@include respond-to(screen-lg) {
 		
@@ -155,15 +155,15 @@ nav.main-nav ul > li.current-post-parent > a:hover {
 	color: $unshackled-black;
 }
 
-nav.main-nav ul {
+nav.main-nav > ul {
 	position: relative;
 	@include respond-to(screen-sm) {
 		top: 2rem;
 	}
 	@include respond-to(screen-md) {
-		top: 5.9rem;
+		top: 4.9rem;
 	}
 	@include respond-to(screen-lg) {
-		top: 6.9rem;
+		top: 4.9rem;
 	}
 }
