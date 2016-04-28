@@ -27,6 +27,9 @@ use Roots\Sage\Wrapper;
     </div>
     <!-- / end search -->
 
+        <?php if ( function_exists('yoast_breadcrumb') ) 
+    {yoast_breadcrumb('<div class="container"><p id="breadcrumbs">','</p></div>');} ?>
+
     <div class="wrap container main-content-wrap" role="document">
       <div class="content row">
         <main class="main">
