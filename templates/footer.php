@@ -28,7 +28,7 @@
 
   <div class="row">
 	  <div class="col-md-12">
-		<small>UNSHACKLED.com Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN: 708466). Registered office: 18 Hilton Street, Manchester M1 1FR. Registered in England No. 09595904</small>
+		<small>UNSHACKLED.com (True Connectivity Solutions Ltd) is authorised and regulated by the Financial Conduct Authority to provide credit brokering services (FCA FRN: 708466). Registered office: 18 Hilton Street, Manchester M1 1FR. Registered in England No. 09595904</small>
 	  </div>
   </div>
 </footer>
