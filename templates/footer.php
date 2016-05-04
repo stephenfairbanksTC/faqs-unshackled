@@ -6,7 +6,7 @@
 
   <div class="row padding-top">
   	<div class="col-md-3">
-	  <p class="copyright">&copy; 2016 UNSHACKLED.com Limited</p>
+	  <p class="copyright">&copy; <?php echo date("Y") ?> UNSHACKLED.com Limited</p>
 	</div>
 	<div class="col-md-3 pull-right-md">
 
@@ -28,7 +28,7 @@
 
   <div class="row">
 	  <div class="col-md-12">
-		<small>UNSHACKLED.com (True Connectivity Solutions Ltd) is authorised and regulated by the Financial Conduct Authority to provide credit brokering services (FCA FRN: 708466). Registered office: 18 Hilton Street, Manchester M1 1FR. Registered in England No. 09595904</small>
+		<small><?php dynamic_sidebar('sidebar-footer-bottom'); ?></small>
 	  </div>
   </div>
 </footer>
